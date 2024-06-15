@@ -56,7 +56,7 @@ const Generate = () => {
     }
     setLoading(true);
     axios
-      .post("http://localhost:5000/paintings/generate", {
+      .post("http://localhost:5000/api/v1/paintings/generate", {
         prompt,
         type: activeType,
         category: activeCat,

@@ -27,7 +27,7 @@ const mainRoutes = createBrowserRouter([
       {
         path: "paintings",
         element: <Paintings></Paintings>,
-        loader: () => fetch("http://localhost:5000/paintings"),
+        loader: () => fetch("http://localhost:5000/api/v1/paintings"),
       },
       {
         path: "generate",
@@ -45,7 +45,7 @@ const mainRoutes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/paintings/${params.id}`),
+          fetch(`http://localhost:5000/api/v1/paintings/${params.id}`),
       },
       {
         path: "registration",
